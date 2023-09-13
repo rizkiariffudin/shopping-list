@@ -6,18 +6,6 @@ from main.forms import Product
 from django.http import HttpResponse
 from django.core import serializers
 
-from django.shortcuts import get_object_or_404
-from main.models import Product  # Replace 'myapp' and 'YourModel' with your actual app and model names
-
-def delete_xml_data(request, pk):
-    # Get the object you want to delete
-    obj = get_object_or_404(Product, pk=pk)
-
-    # Perform the deletion
-    obj.delete()
-
-    return HttpResponse("Data deleted successfully")
-
 # Create your views here.
 def show_main(request):
     products = Product.objects.all()
