@@ -6,7 +6,6 @@ from main.forms import Product
 from django.http import HttpResponse
 from django.core import serializers
 
-# Create your views here.
 def show_main(request):
     products = Product.objects.all()
 
